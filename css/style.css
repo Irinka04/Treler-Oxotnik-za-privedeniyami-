@@ -1,0 +1,997 @@
+* {
+  box-sizing: border-box;
+  transition: all 0.3 s;
+}
+
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+/* класс no-scroll вызывается при клике на кнопку vty.  в мобильных версиях */
+/* .no-scroll {
+  overflow: hidden;
+
+} */
+
+/* 1 секция  header поиск  меню навигация  */
+
+.header {
+  /* расположить вертикально */
+  display: flex;
+  /* выравнивание по вертикали */
+  align-items: center;
+  /* раздвинуть пропорционально после 4 урока меняем  */
+  justify-content: space-between;
+
+  /* отступы */
+  /* padding-top: 35px; */
+  /* padding-bottom: 35px; */
+  /* высота всего шапки  */
+  height: 104px;
+  padding-left: 34px;
+  /* бордер снизу */
+  border-bottom: 1px solid #d4d4d4;
+}
+
+/* в добавленный блок m-menu добавим настройки */
+.m-menu {
+  height: 100%;
+  /* вертикальное выравнивание */
+  align-items: center;
+  display: flex;
+  /* чтобы наше меню растянулось как родитель header */
+  flex-grow: 1;
+  justify-content: space-between;
+
+}
+
+/* для строчных элементов display: inline; */
+/* display: inline; */
+/* Отфильтровать и выбрать на сайте   https://htmlreference.io/ */
+
+/* линия разделитель */
+.line {
+  height: 100%;
+  width: 1px;
+  background-color: #d4d4d4;
+  margin-left: 34px;
+}
+
+/* блок поиска */
+.search-input {
+  background-image: url(../img/search-icon.svg);
+  /* чтобы картика не повторялась */
+  background-repeat: no-repeat;
+  /* расположить картинку по центру */
+  background-position: center left;
+  padding-left: 38px;
+  /* Убираем бордер */
+  border: none;
+  /* стили для текста */
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #a5a5a5;
+  /* отступ слева */
+  margin-left: 34px;
+}
+
+
+/* раздел меню */
+.navigation {
+  margin-right: 44px;
+  margin-left: auto;
+}
+
+.navigation-link {
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 21px;
+  color: #363636;
+  /* отступ с права */
+  margin-right: 18px;
+}
+
+/* общее для блока кнопок */
+
+.button-group {
+  /* такая же высота как у шапки */
+  height: 100%;
+}
+
+/* общее для кнопок классф button */
+.button {
+  height: 100%;
+  /* ьеняем вид курсора */
+  cursor: pointer;
+}
+
+/* кнопка регистрация */
+.sign-up {
+  /* цвет текста */
+  color: #5671f6;
+  /* рашмер шрифта кнопки */
+  font-size: 18px;
+  line-height: 21px;
+  /* бордер отключим */
+  border: none;
+  /* цвет кнопки */
+  background-color: #fff;
+  /* размер кнопки */
+  padding-left: 20px;
+  padding-right: 20px;
+  /* бордер разделителб */
+  border-left: 1px solid #d4d4d4;
+}
+
+/* кнопка войти  */
+.login {
+  /* размер текста  */
+  font-size: 18px;
+  line-height: 21px;
+  /* цвет текста */
+  color: #ffffff;
+  /* цвет кнопки */
+  background-color: #5671f6;
+  border: none;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* 38- */
+
+/* настройки длч меню на маленьких экранах */
+.mobile-buttons {
+  display: none;
+}
+
+.m-menu-button,
+.search-button {
+  padding: 5px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+
+}
+
+.menu-line {
+  display: block;
+  width: 16px;
+  background-color: #000;
+  height: 2px;
+  flex-basis: 16px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  border-radius: 40px;
+}
+
+
+
+
+
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* 2 секция film */
+.container {
+  /* ограничиваю по шерене */
+  max-width: 1000px;
+  /* позиционирую с одинаковыми отступами */
+  margin: auto;
+}
+
+/* у всей секции film отступы */
+.film {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  border-bottom: 1px solid #D4D4D4;
+
+}
+
+/* для блока film-wrapper распологаем текст справа  */
+.film-wrapper {
+  display: flex;
+}
+
+/* для блока с картинкой и кнопкой */
+.film-trailer {
+  /* эта комбинация установит кнопку под картинкой одинакового размера*/
+  display: flex;
+  /* расположение по столбцам и центру */
+  flex-direction: column;
+  margin-right: 60px;
+
+}
+
+/* картинка */
+.poster {
+  /* скруглекние  по верхним краям*/
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  /* ширина картинки  */
+  width: 358px;
+}
+
+/* кнопка вызова видео после картинки */
+.trailer-button {
+  background-color: #fff;
+  /* бордер полоса */
+  border: 1px solid #D4D4D4;
+  /* скругление для этой кнопки */
+  box-sizing: border-box;
+  border-radius: 0px 0px 5px 5px;
+  /* растояние верх низ */
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  /*2 вариант положение по вертикали кнопка текст */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* курсор */
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/*1 вариант кнопка и текст строчно блочные и для них положение кнопка текст по вертикали */
+/* .trailer-button-icon,
+.trailer-button-text {
+  vertical-align: middle;
+} */
+.trailer-button-icon {
+  /* отступ с права */
+  margin-right: 14px;
+
+}
+
+/* текст */
+/* заголовок */
+.film-title {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 42px;
+  color: #363636;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+/* подзаголовок */
+.film-subtitle {
+  display: block;
+  margin-bottom: 32px;
+  font-size: 18px;
+  line-height: 21px;
+  color: #A5A5A5;
+
+}
+
+/* текст */
+.film-description {
+  font-size: 14px;
+  line-height: 150%;
+  color: #000000;
+  max-width: 514px;
+  margin-bottom: 50px;
+}
+
+/* блок таблицы в тексте */
+.about-film {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.about-text-bolt {
+  /* строчно блочный  */
+  display: inline-block;
+  width: 100px;
+  /* вертикальное выравнивание */
+  vertical-align: top;
+  font-weight: bold;
+}
+
+/* блок повторяюшийся */
+.about-text {
+  display: block;
+  font-size: 16px;
+  line-height: 19px;
+  color: #363636;
+  margin-bottom: 16px;
+}
+
+.left-side {
+  /* растояние в табл между текстовыми блоками */
+  margin-right: 40px;
+}
+
+.about-text-reg {
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* текстовый блок рейтинг rating*/
+.rating {
+  /* раположение */
+  display: flex;
+  align-items: center;
+}
+
+.rating-counter {
+  /* 1. вариант размер блока можно указывать отступами */
+  /* padding-top: 34px;
+  padding-bottom: 34px;
+  padding-left: 24px;
+  padding-right: 24px; */
+  /* 2-й вариант */
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #5671F6;
+  border-radius: 10px;
+  margin-right: 28px;
+}
+
+.rating-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #363636;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.rating-text {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 16px;
+  line-height: 19px;
+  color: #363636;
+}
+
+.rating-text-bolt {
+  font-weight: bold;
+}
+
+/* 3 секция cast */
+.cast {
+  padding-top: 70px;
+  padding-bottom: 100px;
+}
+
+/* Актеры и создатели в строку */
+.tabs {
+  display: flex;
+  align-items: center;
+}
+
+/* заголовок секции */
+.section-title {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  color: #A5A5A5;
+  margin-right: 30px;
+}
+
+/* жирным делает активный класс */
+.active {
+  font-weight: 900;
+  color: #000000a8;
+}
+
+/* карточки актеров */
+/* карточки будут раздвигаться при помощи флекс настройки в tabs-content */
+.tabs-content {
+  display: none;
+  align-items: center;
+  /* перенос строки возможен */
+  flex-wrap: wrap;
+  /* скрыть с экрана */
+  visibility: hidden;
+}
+
+/* 22- пересмотреть */
+.tabs-content.visible {
+  display: flex;
+  /* для этого класса с подклассом visible велаем видимым */
+  visibility: visible;
+}
+
+.tab {
+  /* при наведении меняет курсор */
+  cursor: pointer;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  /* распределение */
+  flex-basis: 25%;
+  margin-bottom: 35px;
+}
+
+.card-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.card-title {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.name {
+  font-weight: bold;
+  color: #5671F6;
+  margin-top: 0;
+  margin-bottom: 6px;
+
+}
+
+.en-name {
+  color: #A5A5A5;
+}
+
+/* секция новостей */
+.news {
+  /* фоновый цвет секции */
+  background-color: #F3F3F3;
+  padding-top: 70px;
+  padding-bottom: 100px;
+}
+
+/* Блок с новостями */
+/* все карточки */
+.news-cards {
+  display: flex;
+  flex: wrap;
+  /* распредюкарточек */
+  justify-content: space-between;
+}
+
+/* Заголовок секции  выше есть section-title с описанием но другим цветом  */
+.section-new-title {
+  font-weight: 900;
+  color: #363636;
+  margin-bottom: 65px;
+}
+
+/* карточка */
+.news-card {
+  /* ширина между карточками */
+  flex-basis: 23%;
+  background-color: #fff;
+  /* width: 260px; */
+  height: 160px;
+  /* ширина между карточками */
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.news-data {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+}
+
+/* текст карточки */
+.news-title {
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+  margin-top: 14px;
+}
+
+.button-next {
+  display: none;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(-50%);
+  z-index: 99;
+  cursor: pointer;
+}
+
+
+
+
+@media(max-width:1200px) {
+  .container {
+    max-width: 990px;
+  }
+
+  .card-image {
+    width: 70px;
+    height: 70px;
+  }
+
+  .header {
+    height: 84px;
+    padding-left: 14px;
+    max-width: 99.9%;
+  }
+
+  .logo {
+    width: 48px;
+  }
+
+  .line {
+    margin-left: 15px;
+  }
+
+  .search-input {
+    margin-left: 16px;
+  }
+
+  .navigation {
+    margin-right: 0;
+    margin-left: 10px;
+    margin-right: 0;
+  }
+
+  .navigation-link {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .search-input {
+    font-size: 14px;
+    line-height: 20px;
+    margin-left: 10;
+
+  }
+
+  .button {
+    font-size: 16px;
+    line-height: 1ю4;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .film-description {
+    max-width: 384px;
+  }
+
+  .film-subtitle {
+    margin-bottom: 22px;
+  }
+}
+
+@media(max-width:991px) {
+  .container {
+    max-width: 740px;
+  }
+
+  .header {
+    height: 74px;
+    padding-left: 7px;
+  }
+
+  .navigation-link {
+    margin-right: 7px;
+  }
+
+  .search-input {
+    padding-left: 19px;
+    margin-left: 20px;
+    margin-right: auto;
+  }
+
+  /* .poster {
+    width: 288px;
+  } */
+  .film-title {
+    font-size: 24px;
+    line-height: 1.4;
+  }
+
+  .activ {
+    font-weight: 900;
+  }
+
+  .film-description {
+    max-width: 600px;
+    margin-bottom: 30px;
+  }
+
+  .film-trailer {
+    margin-right: 20px;
+  }
+
+  .line {
+    margin-left: 0;
+  }
+
+  .left-side {
+    margin-right: 20px;
+  }
+
+  .about-film {
+    /* display: block; */
+    margin-bottom: 20px;
+  }
+
+  .about-text-bolt {
+    display: block;
+  }
+
+  .card-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .card {
+    flex-basis: 50%;
+  }
+
+  .news-cards {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100px;
+    margin-bottom: 20px;
+    /* margin-top: 20px; */
+  }
+
+  .news-card {
+    flex-basis: 48%;
+    margin-top: 20px;
+    padding: 10px;
+  }
+}
+
+@media(max-width:760px) {
+  .container {
+    max-width: 560px;
+  }
+
+  .line {
+    display: none;
+  }
+
+  /* мобильное меню  */
+  .m-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    /* поднимет в верх середину низ делят между собой пространство */
+    justify-content: space-around;
+    position: fixed;
+    left: 0;
+    top: 69px;
+    right: 0;
+    bottom: 0;
+    background: #5671f66e;
+    height: 300px;
+  }
+
+  /* Меню когда активно после клика */
+  .m-menu.activ {
+    display: flex;
+  }
+
+  /* для мобильного меню */
+  .button-group {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navigation {
+    display: flex;
+    /* выстраеваем в столбик */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  .search-input {
+    width: 260px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    margin: 0;
+    background-image: none;
+  }
+
+  .navigation-link {
+    color: #ffffff;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  /* для последнего элемента отступ не нужен */
+  .navigation-link:last-child {
+    margin-bottom: 0;
+  }
+
+  /* кнопки войти регистрация */
+  .sign-up {
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    margin-bottom: 10px;
+  }
+
+  .login {
+    padding: 10px 10px;
+    padding-right: 5px;
+    border-radius: 5px;
+  }
+
+  /* / кон модал окно */
+  .logo {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  /* .navigation {
+    display: none;
+  } */
+  .film {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+
+  .film-wrapper {
+    /* ьщжрщ переносить */
+    flex-wrap: wrap;
+  }
+
+  /* меняем местами картинку и текст */
+  .film-text {
+    order: -1;
+    margin-bottom: 30px;
+  }
+
+  /* меняем размер фото */
+  .film-trailer,
+  .poster {
+    min-width: 100%;
+  }
+
+  .card-image {
+    width: 70px;
+    height: 70px;
+  }
+
+  .section-title {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .activ {
+    font-weight: 900;
+  }
+
+  .name {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .en-name {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .about-text-bolt {
+    margin-bottom: 10px;
+  }
+
+  .cast {
+    padding-top: 50px;
+    padding-bottom: 70px;
+  }
+
+  .news {
+    padding-top: 60px;
+    padding-bottom: 70px;
+  }
+
+  .button-next {
+    display: block;
+  }
+
+  .news-card {
+    max-width: 80%;
+  }
+
+  /* настройки смены меню  */
+  /* закрываем большое меню */
+  /* .button-group {
+    display: none;
+  } */
+
+  /* открываем меню для мобильных */
+  .mobile-buttons {
+    display: block;
+    margin-left: auto;
+  }
+
+  /* .search-input {
+    width: 16px;
+    height: 16px;
+    /* прописываем транзишен для плавного появления инпута поиска в состаянии фокуса не срабатывает*/
+  /* transition: widtx 1s; */
+  /* } */
+
+  /* при клике на поиск инпут появиться для ввода поиска */
+  /* .search-input:focus {
+    width: auto;
+  } */
+  /* другой вариант  */
+  .header-logo:after {
+    display: none;
+  }
+
+  /* .search-input,
+  .line {
+    display: none;
+  } */
+
+  /* открываем маленькое */
+  /* @@@@@@@@@@@@@@@@@@@@ */
+  /* настройки нового меню для мобильных */
+
+  .header {
+    padding-right: 2.5%;
+    padding-left: 2.5%;
+  }
+
+
+}
+
+@media(max-width:576px) {
+  .container {
+    max-width: 92%;
+  }
+
+  /* меняем местами картинку и текст */
+  .film-text {
+    order: 1;
+    margin-bottom: 0;
+  }
+
+  .film-title {
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 15px;
+    margin-top: 30px;
+  }
+
+  .film-subtitle {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 26px;
+  }
+
+  .film-description {
+    font-size: 14px;
+    line-height: 150%;
+    margin-bottom: 40px;
+  }
+
+  .about-film {
+    /* список из таблицы в построчный */
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+
+  .about-text-bolt {
+    font-size: 16px;
+    line-height: 19px;
+    /* выстраеваем в строку  */
+    display: inline-block;
+  }
+
+  .about-text-reg {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .rating-title {
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .rating-text {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .section-title {
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .activ {
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  /* раздел актеры card */
+  .card {
+    flex-basis: 100%;
+    /* отступ между карточками */
+    margin-bottom: 20px;
+  }
+
+  .tabs {
+    /* отступ от названия секции актеры вниз */
+    margin-bottom: 35px;
+  }
+
+  /* растояние внизу у секции cast актеры */
+  .cast {
+    padding-bottom: 50px;
+  }
+
+  /* меняем размер аватарок */
+  .card-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  /* раздел новости */
+  .news-card {
+    flex-basis: 100%;
+  }
+
+  /* новости по теме */
+  .section-new-title {
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  .news {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+
+  /* карточки новостей */
+  .news-cards {
+    width: 260px;
+    height: 160px;
+  }
+
+  /* Размер в карточках */
+  .news-card {
+    padding: 30px 30px;
+    /* width: 260px;
+    height: 160px; */
+  }
+
+  /* текст даты */
+  .news-data {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 14px;
+  }
+
+  /* шрифт новостей */
+  .news-title {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 22px;
+  }
+
+
+}

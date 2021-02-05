@@ -1,0 +1,191 @@
+* {
+  box-sizing: border-box;
+  transition: all 0.3 s;
+}
+
+
+
+
+body {
+  font-family: "Roboto", sans-serif;
+
+  font-weight: 300;
+}
+
+/* сукция */
+.section {
+
+  /* фоновый цвет */
+  background-color: #f1f1f1;
+  /* отступы секции */
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+.container {
+
+  /* ограничиваю по шерене */
+  max-width: 1100px;
+  /* позиционирую с одинаковыми отступами */
+  margin: auto;
+
+}
+
+/*все карточки */
+
+.wraper-sait {
+
+  display: flex;
+  /* для переноса */
+  flex: wrap;
+  /* ширина между карточками */
+  flex-basis: 2%;
+  /* распредюкарточек */
+  /* justify-content: space-between; */
+  margin: 40px 30px;
+
+
+}
+
+/* карточка */
+
+.vcard {
+  align-items: center;
+  /* ширина между карточками */
+  /* flex-basis: 3%; */
+
+  /* фоновый цвет карточки */
+  background-color: rgb(251, 252, 253);
+  /* размер влияет на ширину карточки */
+  width: 100%;
+  /* размер влияет на высоту карточки */
+  height: 450px;
+  /* border: 2px solid #4722eb; */
+
+  padding: 10px;
+  margin: 10px 10px;
+
+  border-radius: 1px;
+}
+
+.content {
+  display: flex;
+  margin: 20px 20px;
+}
+
+/* блок iframe */
+/* .frame-wrapper {
+  position: relative;
+  font-size: 0;
+} */
+
+.frame-wrapper {
+  width: 200%;
+  height: 600px;
+  border: 0;
+  overflow: hidden;
+  -webkit-transform: scale(0.45);
+  transform: scale(0.45);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid rgb(110, 110, 110);
+}
+
+/* сам iframe */
+.frame-viewer {
+
+  width: 100%;
+  height: 600px;
+  right: 0;
+  border: 0;
+
+
+}
+
+/* .frame-viewer iframe {
+  width: 300%;
+
+  height: 400px;
+
+  overflow: hidden;
+  -webkit-transform: scale(0.45);
+  transform: scale(0.45);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+
+  /* убирает бордер */
+/* border: #4722eb; */
+/* border: 0;
+} */
+
+
+
+.frame-wrapper .frame-border {
+  /* position: absolute; */
+  /* z-index: 1; */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-box-shadow: inset 0 0 0 1px rgb(0 0 0 / 1%);
+  box-shadow: inset 0 0 0 1px rgb(0 0 0 / 1%);
+  /* pointer-events: none; */
+  margin-right: 5px;
+}
+
+.frame-border {
+  margin-left: -15px;
+  margin-right: -15px;
+
+
+}
+
+/* Заголовок  секции*/
+.section-title.activ {
+  font-weight: 700;
+  color: #363636e1;
+  margin-bottom: 60px;
+  margin-left: 60px;
+
+}
+
+
+
+
+/* текст карточки */
+.news-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #000000;
+  margin-top: 14px;
+  margin-bottom: 20px;
+  width: 90%;
+}
+
+/* Текст ссылки  */
+.text-link {
+  font-weight: 400;
+  text-decoration: none;
+  padding: 10px 15px;
+  color: #000;
+
+}
+
+.sp {
+  color: red;
+}
+
+@media(max-width:760px) {
+  .container {
+    max-width: 92%;
+  }
+
+  .wraper-sait {
+    flex-wrap: wrap;
+  }
+}
